@@ -33,10 +33,10 @@ return function(p, c)
     Macro = { fg = p.limeDeep },
     PreCondit = { fg = p.limeDeep },
 
-    Type = { fg = p.sky },
-    StorageClass = { fg = p.sky },
-    Structure = { fg = p.sky },
-    Typedef = { fg = p.sky },
+    Type = { fg = p.type },
+    StorageClass = { fg = p.type },
+    Structure = { fg = p.type },
+    Typedef = { fg = p.type },
 
     Special = { fg = p.mint },
     SpecialChar = { fg = p.mint },

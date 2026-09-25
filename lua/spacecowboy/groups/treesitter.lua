@@ -36,9 +36,9 @@ return function(p, c)
     ["@number.float"] = { fg = p.teal },
 
     -- types
-    ["@type"] = { fg = p.sky },
-    ["@type.builtin"] = { fg = p.sky },
-    ["@type.definition"] = { fg = p.sky },
+    ["@type"] = { fg = p.type },
+    ["@type.builtin"] = { fg = p.type },
+    ["@type.definition"] = { fg = p.type },
     ["@type.qualifier"] = { fg = p.lime },
     ["@attribute"] = { fg = p.lime },
     ["@attribute.builtin"] = { fg = p.lime },
