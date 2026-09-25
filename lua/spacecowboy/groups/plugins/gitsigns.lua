@@ -1,0 +1,27 @@
+return function(p, c)
+  return {
+    GitSignsAdd = { fg = p.mintPale, bg = p.none },
+    GitSignsChange = { fg = p.butter, bg = p.none },
+    GitSignsDelete = { fg = p.pink, bg = p.none },
+    GitSignsChangedelete = { fg = p.butter, bg = p.none },
+    GitSignsTopdelete = { fg = p.pink, bg = p.none },
+    GitSignsUntracked = { fg = p.dim, bg = p.none },
+    GitSignsAddNr = { fg = p.mintPale },
+    GitSignsChangeNr = { fg = p.butter },
+    GitSignsDeleteNr = { fg = p.pink },
+    GitSignsAddLn = { bg = p.diffAddedDimmed },
+    GitSignsChangeLn = { bg = p.bg2 },
+    GitSignsDeleteLn = { bg = p.diffRemovedDimmed },
+    GitSignsAddInline = { bg = p.diffAddedWord },
+    GitSignsChangeInline = { bg = p.bg4 },
+    GitSignsDeleteInline = { bg = p.diffRemovedWord },
+    GitSignsAddPreview = { bg = p.diffAdded },
+    GitSignsDeletePreview = { bg = p.diffRemoved },
+    GitSignsCurrentLineBlame = { fg = p.dim, italic = true },
+    GitSignsAddVirtLn = { bg = p.diffAddedDimmed },
+    GitSignsDeleteVirtLn = { bg = p.diffRemovedDimmed },
+    GitSignsStagedAdd = { fg = p.mintPale, bg = p.none },
+    GitSignsStagedChange = { fg = p.butter, bg = p.none },
+    GitSignsStagedDelete = { fg = p.pink, bg = p.none },
+  }
+end

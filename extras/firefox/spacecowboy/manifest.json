@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Spacecowboy",
+  "version": "1.0",
+  "description": "Umber ground, sand text, two hue families: cactus green and dust orange. Everything else tonal.",
+  "author": "Laurent Lanteigne",
+  "browser_specific_settings": { "gecko": { "id": "spacecowboy-theme@lanteignel93" } },
+  "theme": {
+    "colors": {
+      "frame": "#130e0a",
+      "frame_inactive": "#130e0a",
+      "tab_background_text": "#a99a85",
+      "tab_selected": "#201812",
+      "tab_text": "#f3e9d6",
+      "tab_line": "#a8d88a",
+      "tab_loading": "#b7d9a0",
+      "toolbar": "#201812",
+      "toolbar_text": "#d3c6b0",
+      "bookmark_text": "#d3c6b0",
+      "toolbar_field": "#2a2019",
+      "toolbar_field_text": "#f3e9d6",
+      "toolbar_field_border": "#8a6a52",
+      "toolbar_field_focus": "#2a2019",
+      "toolbar_field_text_focus": "#f3e9d6",
+      "toolbar_field_border_focus": "#a8d88a",
+      "toolbar_field_highlight": "#362a20",
+      "toolbar_field_highlight_text": "#f3e9d6",
+      "toolbar_top_separator": "#130e0a",
+      "toolbar_bottom_separator": "#8a6a52",
+      "toolbar_vertical_separator": "#8a6a52",
+      "icons": "#a99a85",
+      "icons_attention": "#a8d88a",
+      "button_background_hover": "#362a20",
+      "button_background_active": "#43352a",
+      "popup": "#201812",
+      "popup_text": "#d3c6b0",
+      "popup_border": "#8a6a52",
+      "popup_highlight": "#362a20",
+      "popup_highlight_text": "#f3e9d6",
+      "sidebar": "#201812",
+      "sidebar_text": "#d3c6b0",
+      "sidebar_border": "#8a6a52",
+      "sidebar_highlight": "#362a20",
+      "sidebar_highlight_text": "#f3e9d6",
+      "ntp_background": "#130e0a",
+      "ntp_text": "#d3c6b0"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}
