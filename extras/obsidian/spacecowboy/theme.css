@@ -36,11 +36,14 @@
   --interactive-accent-hover: #e59a5b;
   --interactive-success: #b7d9a0;
 
+  /* One hue per level, adjacent levels never sharing a family; mint, lav and teal
+     would sit on lime or the body sand in spacecowboy. Size and form (HEADINGS
+     below) carry the rest. */
   --h1-color: #a8d88a;
-  --h2-color: #b7d9a0;
-  --h3-color: #f3e9d6;
-  --h4-color: #d3c6b0;
-  --h5-color: #e6b98c;
+  --h2-color: #e59a5b;
+  --h3-color: #f0c090;
+  --h4-color: #e07a5f;
+  --h5-color: #f3e9d6;
   --h6-color: #a99a85;
 
   --link-color: #f3e9d6;
@@ -87,4 +90,193 @@
   --graph-node-attachment: #e6b98c;
   --graph-node-focused: #a8d88a;
   --graph-node-unresolved: #7a6852;
+}
+
+/* ============================================================================
+   DATA COLOURS — callouts, charts and heatmaps follow the palette too.
+   Obsidian's base colours feed its callouts and most plugins; --chart-* and
+   --heat-* are read by the dataviewjs dashboards (Personal/Productivity), which
+   redraw on a theme switch. Keep the role names stable: the notes use them.
+============================================================================ */
+.theme-dark {
+  --color-red: #e07a5f;       --color-red-rgb: 224, 122, 95;
+  --color-orange: #f0b48a;   --color-orange-rgb: 240, 180, 138;
+  --color-yellow: #f0c090;  --color-yellow-rgb: 240, 192, 144;
+  --color-green: #a8d88a;     --color-green-rgb: 168, 216, 138;
+  --color-cyan: #b7d9a0;      --color-cyan-rgb: 183, 217, 160;
+  --color-blue: #f3e9d6;       --color-blue-rgb: 243, 233, 214;
+  --color-purple: #d3c6b0;     --color-purple-rgb: 211, 198, 176;
+  --color-pink: #f0a58a;      --color-pink-rgb: 240, 165, 138;
+
+  /* Callouts: Obsidian 1.13 wants full colours here (it uses them in color and
+     color-mix()), not the r, g, b triplets older themes set; a triplet leaves every
+     callout uncoloured. Same mapping as Obsidian's own, spelled out so quote (a
+     fixed grey there) follows the palette as well. */
+  --callout-default: var(--color-blue);
+  --callout-info: var(--color-blue);
+  --callout-todo: var(--color-blue);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-important: var(--color-cyan);
+  --callout-success: var(--color-green);
+  --callout-question: var(--color-orange);
+  --callout-warning: var(--color-orange);
+  --callout-fail: var(--color-red);
+  --callout-error: var(--color-red);
+  --callout-bug: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-quote: #a99a85;
+
+  /* Chart series, in the order the dashboards use them, plus axis text and grid.
+     Each has an -rgb twin for translucent fills: rgba(var(--chart-1-rgb), 0.2).
+     Picked to stay six distinct colours in every palette: spacecowboy has only a
+     green and an orange family, so the tonal roles (steel, lav) would repeat sand. */
+  --chart-1: #a8d88a;      --chart-1-rgb: 168, 216, 138;
+  --chart-2: #e59a5b;      --chart-2-rgb: 229, 154, 91;
+  --chart-3: #6f8f3a;  --chart-3-rgb: 111, 143, 58;
+  --chart-4: #e07a5f;      --chart-4-rgb: 224, 122, 95;
+  --chart-5: #f0c090;    --chart-5-rgb: 240, 192, 144;
+  --chart-6: #f3e9d6;       --chart-6-rgb: 243, 233, 214;
+  --chart-muted: #7a6852;   --chart-muted-rgb: 122, 104, 82;
+  --chart-text: #d3c6b0;
+  --chart-grid: #4f4034;    --chart-grid-rgb: 79, 64, 52;
+
+  /* Heatmap ramp, 1 = the good end, 5 = the bad end; 2 and 4 are mixed so the
+     steps stay even in any palette. */
+  --heat-1: #a8d88a;
+  --heat-2: color-mix(in oklab, #a8d88a, #f0c090);
+  --heat-3: #f0c090;
+  --heat-4: color-mix(in oklab, #f0c090, #e07a5f);
+  --heat-5: #e07a5f;
+  --heat-empty: #2a2019;
+}
+
+/* heatmap-calendar paints its own empty cells and today ring in fixed greys */
+body.theme-dark .heatmap-calendar-boxes .isEmpty { background: var(--heat-empty); }
+body.theme-dark .heatmap-calendar-boxes .today { border: 1px solid var(--interactive-accent); }
+
+/* ============================================================================
+   LAYOUT — geometry ported from Darkvoid (the theme these replaced), so a palette
+   flip never changes widths or sizes. Colour only through the variables above;
+   no hex here.
+============================================================================ */
+.theme-dark {
+  --hr-thickness: 1px;
+  /* Widths: wide reading column, roomy modals */
+  --file-line-width: 1100px;
+  --modal-max-width: 1100px;
+  --modal-max-width-narrow: 800px;
+  --prompt-max-width: 80vw;
+  --tab-max-width: 320px;
+  --table-column-max-width: none;
+  --metadata-max-width: none;
+}
+
+/* HEADINGS: every level differs in size and form as well as colour, so the
+   hierarchy reads even where two hues sit close. Reading view and live preview. */
+.theme-dark {
+  --h1-size: 2em;     --h1-weight: 700;
+  --h2-size: 1.6em;   --h2-weight: 700;
+  --h3-size: 1.35em;  --h3-weight: 650;
+  --h4-size: 1.15em;  --h4-weight: 600;
+  --h5-size: 1em;     --h5-weight: 600;  --h5-variant: small-caps;
+  --h6-size: 0.85em;  --h6-weight: 600;
+}
+.markdown-rendered h1, .markdown-source-view.mod-cm6 .HyperMD-header-1 {
+  padding-bottom: 0.15em;
+  border-bottom: 2px solid color-mix(in srgb, var(--h1-color) 45%, transparent);
+}
+.markdown-rendered h2, .markdown-source-view.mod-cm6 .HyperMD-header-2 {
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.markdown-rendered h5, .markdown-source-view.mod-cm6 .cm-header-5 { letter-spacing: 0.04em; }
+.markdown-rendered h6, .markdown-source-view.mod-cm6 .cm-header-6 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Tabs: continuous strip, subtle elevation for the active one */
+.workspace-tab-header { background-color: transparent; padding: 4px 10px; }
+.workspace-tab-header.is-active { background-color: var(--background-modifier-hover); }
+.workspace-tab-header.is-active .workspace-tab-header-inner-title { font-weight: 600; }
+.workspace-tab-header-inner-title { font-size: 0.9em; }
+/* Page-corner wedges off on main editor tabs only (sidebar tabs untouched) */
+.workspace-split.mod-root .workspace-tab-header::before,
+.workspace-split.mod-root .workspace-tab-header::after { display: none; content: none; }
+
+/* File explorer */
+.nav-file-title, .nav-folder-title { padding: 2px 8px; }
+.nav-folder-title { font-weight: 600; }
+
+/* Tags: flat pills */
+.tag, a.tag { border: none; }
+
+/* HR: plain line, no decoration */
+hr { border: none; border-top: 1px solid var(--hr-color); margin: 1em 0; }
+hr::after { content: none; }
+
+/* Blockquote: just a left rule */
+.markdown-rendered blockquote {
+  background-color: transparent;
+  border: none;
+  border-left: 2px solid var(--blockquote-border-color);
+  font-style: normal;
+}
+
+/* Tables */
+.markdown-rendered table { border-collapse: collapse; border: 1px solid var(--background-modifier-hover); }
+.markdown-rendered th,
+.markdown-rendered td { border: 1px solid var(--background-modifier-hover); padding: 0.25em 0.6em; }
+
+/* Status bar: lualine-style segments with a mode pill */
+.status-bar {
+  background-color: var(--background-primary);
+  border-top: 1px solid var(--background-modifier-border);
+  font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 1em;
+  padding: 0;
+  gap: 0;
+  height: 32px;
+}
+.status-bar::before {
+  content: "NORMAL";
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+.status-bar-item {
+  background-color: var(--background-modifier-hover);
+  padding: 0 14px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  border-right: 1px solid var(--background-primary);
+  border-radius: 0 !important;
+  margin: 0;
+}
+.status-bar-item:nth-child(even) { background-color: var(--background-modifier-active-hover); }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Math: slightly larger */
+.math, .mjx-math, mjx-container, mjx-container[jax="CHTML"] { font-size: 1.15em; }
+
+/* Editor cursor: 2px */
+.cm-cursor, .cm-cursor-primary { border-left-width: 2px !important; }
+
+/* External links: small arrow after the text */
+.markdown-rendered a[href^="http"]::after,
+.markdown-rendered a[href^="https"]::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--text-faint);
+  margin-left: 1px;
 }
