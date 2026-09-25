@@ -21,7 +21,7 @@ return {
   limeSoft = "#c4dca8", -- hints
   cursor = "#e59a5b",
   search = "#f0c090",
-  func = "#e59a5b",
+  func = "#f3e9d6",
   op = "#d3c6b0",
   mint = "#b7d9a0",        -- arrival: success, command
   mintVivid = "#e59a5b", -- selection in menus

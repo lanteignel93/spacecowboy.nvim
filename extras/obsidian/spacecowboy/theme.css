@@ -64,7 +64,7 @@
   --code-normal: #bfb29c;
   --code-background: #201812;
   --code-comment: #7a6852;
-  --code-function: #e59a5b;
+  --code-function: #f3e9d6;
   --code-important: #e07a5f;
   --code-keyword: #a8d88a;
   --code-operator: #d3c6b0;
@@ -132,7 +132,7 @@
      Picked to stay six distinct colours in every palette: spacecowboy has only a
      green and an orange family, so the tonal roles (steel, lav) would repeat sand. */
   --chart-1: #a8d88a;      --chart-1-rgb: 168, 216, 138;
-  --chart-2: #e59a5b;      --chart-2-rgb: 229, 154, 91;
+  --chart-2: #e59a5b; --chart-2-rgb: 229, 154, 91;
   --chart-3: #6f8f3a;  --chart-3-rgb: 111, 143, 58;
   --chart-4: #e07a5f;      --chart-4-rgb: 224, 122, 95;
   --chart-5: #f0c090;    --chart-5-rgb: 240, 192, 144;
