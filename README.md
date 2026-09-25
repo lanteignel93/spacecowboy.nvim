@@ -1,6 +1,6 @@
 # spacecowboy.nvim
 
-A desert at night. Umber ground, sand text, and two hue families only: cactus green for keywords, arrival and what is yours; dust orange for functions, the cursor, the selection, constants at its pale end and errors at its terracotta end. Everything else is the desert floor: types are bone, stepped above identifiers in sand; strings drop below the foreground. No blue, no violet, no yellow.
+A desert at night. Umber ground, sand text, and two hue families only: cactus green for keywords, arrival and what is yours; dust orange for functions and types, the cursor, the selection, constants at its pale end and errors at its terracotta end. Everything else is the desert floor: identifiers in sand with booleans in bone just above them; strings drop below the foreground. No blue, no violet, no yellow.
 
 Built for C++ and Python: functions carry weight, punctuation and scope noise recede.
 
