@@ -64,7 +64,7 @@
   --code-normal: #bfb29c;
   --code-background: #201812;
   --code-comment: #7a6852;
-  --code-function: #f3e9d6;
+  --code-function: #e59a5b;  /* Obsidian paints types, builtins and class names with this, not function names */
   --code-important: #e07a5f;
   --code-keyword: #a8d88a;
   --code-operator: #d3c6b0;
