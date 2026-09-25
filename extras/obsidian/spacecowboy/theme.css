@@ -156,8 +156,8 @@ body.theme-dark .heatmap-calendar-boxes .isEmpty { background: var(--heat-empty)
 body.theme-dark .heatmap-calendar-boxes .today { border: 1px solid var(--interactive-accent); }
 
 /* ============================================================================
-   LAYOUT — geometry ported from Darkvoid (the theme these replaced), so a palette
-   flip never changes widths or sizes. Colour only through the variables above;
+   LAYOUT — widths and sizes shared by every palette, so a flip never changes
+   geometry. Colour only through the variables above;
    no hex here.
 ============================================================================ */
 .theme-dark {
