@@ -4,7 +4,7 @@ A desert at night. Umber ground, sand text, and two hue families only: cactus gr
 
 Built for C++ and Python: functions carry weight, punctuation and scope noise recede.
 
-<!-- screenshots/cpp.png: coming with the first desktop pass -->
+![spacecowboy.nvim: C++ and Python in Neovim, with the terminal palette alongside](screenshots/cpp.png)
 
 ## Install
 
