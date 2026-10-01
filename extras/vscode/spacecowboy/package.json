@@ -1,0 +1,26 @@
+{
+  "name": "spacecowboy-theme",
+  "displayName": "Spacecowboy",
+  "description": "Umber ground, sand text, two hue families: cactus green and dust orange. Everything else tonal.",
+  "version": "1.0.0",
+  "publisher": "lanteignel93",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lanteignel93/spacecowboy.nvim"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "spacecowboy", "neovim"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Spacecowboy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/spacecowboy-color-theme.json"
+      }
+    ]
+  }
+}
